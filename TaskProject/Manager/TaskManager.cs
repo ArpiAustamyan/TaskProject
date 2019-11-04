@@ -61,12 +61,14 @@ namespace Manager
             Del a = new Del();
             using (Context db = new Context())
             {
-                var eu = db.Tasks.Where(i => i.CreateId == createid).FirstOrDefault();
-                eu.Flag = true;
-                db.SaveChanges();
-                a._CreateDate = eu.CreateDate;
-                a._DelectedId = eu.AssignedId;
-               
+                var eu = db.Tasks.Where(i => i.CreateId == createid && i.Id==taskid).FirstOrDefault();
+                if (eu != null)
+                {
+                    eu.Flag = true;
+                    db.SaveChanges();
+                    a._CreateDate = eu.CreateDate;
+                    a._DelectedId = eu.AssignedId;
+                }
             }
             Log.Logging(a);
         }

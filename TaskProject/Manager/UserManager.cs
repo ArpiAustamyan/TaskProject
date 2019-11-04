@@ -49,11 +49,13 @@ namespace Manager
             using (Context db = new Context())
             {
                 var eu = db.Users.Where(i => i.Id == id).FirstOrDefault();
-                eu.Flag = true;
-                a._CreateDate = eu.CreateDate;
-                a._DelectedId = eu.Id;
-                db.SaveChanges();
-               
+                if (eu != null)
+                {
+                    eu.Flag = true;
+                    a._CreateDate = eu.CreateDate;
+                    a._DelectedId = eu.Id;
+                    db.SaveChanges();
+                }
             } 
            Log.Logging(a);
         }
