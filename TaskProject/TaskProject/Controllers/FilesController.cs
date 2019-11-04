@@ -1,6 +1,7 @@
 ﻿using Entity;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -11,20 +12,31 @@ namespace TaskProject.Controllers
 {
     public class FilesController : ApiController
     {
-        [HttpPost]
-        [Route("api/UserTasks")]
-        public IHttpActionResult PostCreate(File nfile, HttpPostedFileBase file)
+        [System.Web.Http.HttpPost]
+        public IHttpActionResult Index(HttpPostedFileBase file)
         {
             using (Context db = new Context())
             {
-                if (ModelState.IsValid)
+                string path;
+                if (file != null && file.ContentLength > 0)
                 {
-                    db.Files.Add(nfile);
+                    var fileName = Path.GetFileName(file.FileName);
+
+                    path = Path.Combine(
+                        HttpContext.Current.Server.MapPath(@"C:\Users\santr\OneDrive\Рабочий стол\EntityFiles\"),
+                        fileName
+                    );
+
+                    file.SaveAs(path);
+                    db.Files.Add(new Entity.File
+                    {
+                        Name = path
+                    });
                     db.SaveChanges();
                     return Ok();
                 }
-                return BadRequest();
             }
+            return BadRequest();
         }
     }
 }
