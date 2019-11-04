@@ -16,12 +16,13 @@ namespace TaskProject.Controllers
 
         [ResponseType(typeof(Task))]
         [BasicAuthentication]
-        public IHttpActionResult PostTask(Task task)
+        public IHttpActionResult PostTask(TaskModel task)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
+            task.CreateId = Security.AuthId;
             tm.Add(task);
             return CreatedAtRoute("DefaultApi", new { id = task }, task);
         }

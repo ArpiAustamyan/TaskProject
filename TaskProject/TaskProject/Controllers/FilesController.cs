@@ -13,23 +13,25 @@ namespace TaskProject.Controllers
     public class FilesController : ApiController
     {
         [System.Web.Http.HttpPost]
-        public IHttpActionResult Index(HttpPostedFileBase file)
+        public IHttpActionResult Index(int id1 )
         {
             using (Context db = new Context())
             {
+                var file = HttpContext.Current.Request.Files.Count > 0 ? HttpContext.Current.Request.Files[0] : null;
                 string path;
                 if (file != null && file.ContentLength > 0)
                 {
                     var fileName = Path.GetFileName(file.FileName);
 
-                    path = Path.Combine(
-                        HttpContext.Current.Server.MapPath(@"C:\Users\santr\OneDrive\Рабочий стол\EntityFiles\"),
-                        fileName
-                    );
+                    path = (@"C:\Users\santr\OneDrive\Рабочий стол\EntityFiles\") +
+                        fileName;
+                    
 
                     file.SaveAs(path);
                     db.Files.Add(new Entity.File
                     {
+                        CreateId=Security.AuthId-1,
+                        AssignedId=id1 ,
                         Name = path
                     });
                     db.SaveChanges();

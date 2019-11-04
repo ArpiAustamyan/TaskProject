@@ -10,3 +10,15 @@ C:\Users\santr\source\repos\TaskProject\Models\bin\Debug\Entity.pdb
 C:\Users\santr\source\repos\TaskProject\Models\bin\Debug\Entity.dll.config
 C:\Users\santr\source\repos\TaskProject\Models\bin\Debug\EntityFramework.xml
 C:\Users\santr\source\repos\TaskProject\Models\obj\Debug\Models.csproj.CopyComplete
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Models\bin\Debug\Models.dll
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Models\bin\Debug\Models.pdb
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Models\bin\Debug\Entity.dll
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Models\bin\Debug\EntityFramework.dll
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Models\bin\Debug\Entity.pdb
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Models\bin\Debug\Entity.dll.config
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Models\bin\Debug\EntityFramework.xml
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Models\obj\Debug\Models.csproj.CopyComplete
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Models\obj\Debug\Models.dll
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Models\obj\Debug\Models.pdb

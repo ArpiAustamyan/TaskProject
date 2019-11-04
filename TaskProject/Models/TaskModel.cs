@@ -10,8 +10,8 @@ namespace Manager
 {
     public class TaskModel
     {
-        //public int CreateId { get; set; }
-        //public int AssignedId { get; set; }
+        public int CreateId { get; set; }
+        public int AssignedId { get; set; }
         public string Title { get; set; }
         public DateTime CreateDate { get; set; }
         public DateTime ExpirationDate { get; set; }
@@ -20,5 +20,6 @@ namespace Manager
         public bool Flag { get; set; }
         public User Create { set; get; } 
         public User Assigned { set; get; }
+        public List<File> Attachments { get; set; }
     }
 }

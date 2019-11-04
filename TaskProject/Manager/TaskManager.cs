@@ -13,16 +13,33 @@ namespace Manager
 {
     public class TaskManager
     {
-        public void Add(Task model)
+        public void Add(TaskModel model)
         {
             using (Context db = new Context())
             {
-                model.Status = Statuses.Open;
-                model.Flag = false;
-                db.Tasks.Add(model);
+                Task task = new Task
+                {
+                    CreateId=model.CreateId,
+                    AssignedId = model.AssignedId,
+                    Title = model.Title,
+                    CreateDate = DateTime.Now,
+                    ExpirationDate = model.ExpirationDate,
+                    Status = Statuses.Open,
+                    Description = model.Description,
+                    Flag = false
+                };
+                db.Tasks.Add(task);
                 db.SaveChanges();
             }
         }
+
+        //public Task Get(int id)
+        //{
+        //    using (Context db = new Context())
+        //    {
+
+        //    }
+        //}
 
         public void Delete(int createid)
         {
