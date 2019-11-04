@@ -14,3 +14,18 @@ C:\Users\santr\source\repos\TaskProject\Entity\obj\Debug\Entity.Migrations.First
 C:\Users\santr\source\repos\TaskProject\Entity\obj\Debug\Entity.csproj.GenerateResource.cache
 C:\Users\santr\source\repos\TaskProject\Entity\obj\Debug\Entity.Migrations.Second.resources
 C:\Users\santr\source\repos\TaskProject\Entity\obj\Debug\Entity.Migrations.EnumStatus.resources
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Entity\bin\Debug\Entity.dll.config
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Entity\bin\Debug\Entity.dll
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Entity\bin\Debug\Entity.pdb
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Entity\bin\Debug\EntityFramework.dll
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Entity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Entity\bin\Debug\EntityFramework.xml
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Entity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Entity\obj\Debug\Entity.csprojAssemblyReference.cache
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Entity\obj\Debug\Entity.csproj.CopyComplete
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Entity\obj\Debug\Entity.dll
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Entity\obj\Debug\Entity.pdb
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Entity\obj\Debug\Entity.Migrations.First.resources
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Entity\obj\Debug\Entity.csproj.GenerateResource.cache
+C:\Users\santr\OneDrive\Рабочий стол\New folder (3)\TaskProject\Entity\obj\Debug\Entity.Migrations.Second.resources

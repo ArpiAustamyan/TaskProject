@@ -11,9 +11,10 @@ namespace Entity
 {
     public class Task
     {
-        [Key, Column(Order = 1)]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
         public int CreateId { get; set; }
-        [Key, Column(Order = 2)]
         public int AssignedId { get; set; }
         public string Title { get; set; }
         public DateTime CreateDate { get; set; }

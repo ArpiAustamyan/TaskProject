@@ -13,11 +13,10 @@ namespace Entity
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int CreateId { get; set; }
-        public int AssignedId { get; set; }
+        public int TaskId { get; set; }
         public string Name { get; set; }
 
-        [ForeignKey("CreateId,AssignedId")]
+        [ForeignKey("TaskId")]
         public Task Task { set; get; }
     }
 }

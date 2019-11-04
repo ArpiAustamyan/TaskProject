@@ -12,12 +12,16 @@
 //    public class BaseManager
 //    {
 
-//        public void Delete<T>(int id) where T :class
+//        public void Delete<T>(int id) where T : class
 //        {
 //            Del a = new Del();
 //            using (Context db = new Context())
 //            {
-//                var eu = db.Set<T>().FirstOrDefault(GetIdQuery(id));
+
+//                var eu = db.Set<T>().Find(id);
+//                // return t;
+
+//                // var eu = db.Set<T>().FirstOrDefault(GetIdQuery(id));
 //                eu.Flag = true;
 //                a._CreateDate = eu.CreateDate;
 //                a._DelectedId = eu.Id;
@@ -26,11 +30,6 @@
 //            }
 
 //            Log.Logging(a);
-//        }
-
-//        private Expression<Func<object, bool>> GetIdQuery(int id)
-//        {
-//            throw new NotImplementedException();
 //        }
 
 //        //private Expression<Func<T, bool>> GetIdQuery<T>(T record) where T : class

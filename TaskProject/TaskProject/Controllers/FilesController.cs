@@ -32,8 +32,7 @@ namespace TaskProject.Controllers
                     file.SaveAs(path);
                     db.Files.Add(new Entity.File
                     {
-                        CreateId=Security.AuthId-1,
-                        AssignedId=id1 ,
+                        Id=Security.AuthId-1,
                         Name = path
                     });
                     db.SaveChanges();

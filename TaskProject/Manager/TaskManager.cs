@@ -39,7 +39,7 @@ namespace Manager
             {
                 var tasks = (from t in db.Tasks
                              join u in db.Users on t.CreateId equals u.Id 
-                             join f in db.Files on t.CreateId equals f.CreateId into Files
+                             join f in db.Files on t.CreateId equals f.Id into Files
                              where t.CreateId == id
                              select new TaskInfoModel
                              {

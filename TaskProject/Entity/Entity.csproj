@@ -51,17 +51,13 @@
     <Compile Include="Context.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="File.cs" />
-    <Compile Include="Migrations\201911020853326_First.cs" />
-    <Compile Include="Migrations\201911020853326_First.Designer.cs">
-      <DependentUpon>201911020853326_First.cs</DependentUpon>
+    <Compile Include="Migrations\201911042254076_First.cs" />
+    <Compile Include="Migrations\201911042254076_First.Designer.cs">
+      <DependentUpon>201911042254076_First.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201911020858574_Second.cs" />
-    <Compile Include="Migrations\201911020858574_Second.Designer.cs">
-      <DependentUpon>201911020858574_Second.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911031424372_EnumStatus.cs" />
-    <Compile Include="Migrations\201911031424372_EnumStatus.Designer.cs">
-      <DependentUpon>201911031424372_EnumStatus.cs</DependentUpon>
+    <Compile Include="Migrations\201911042257081_Second.cs" />
+    <Compile Include="Migrations\201911042257081_Second.Designer.cs">
+      <DependentUpon>201911042257081_Second.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,14 +69,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201911020853326_First.resx">
-      <DependentUpon>201911020853326_First.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201911042254076_First.resx">
+      <DependentUpon>201911042254076_First.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911020858574_Second.resx">
-      <DependentUpon>201911020858574_Second.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911031424372_EnumStatus.resx">
-      <DependentUpon>201911031424372_EnumStatus.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201911042257081_Second.resx">
+      <DependentUpon>201911042257081_Second.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
