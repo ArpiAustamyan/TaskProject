@@ -1,0 +1,17 @@
+C:\Users\santr\source\repos\TaskProject\Manager\bin\Debug\Manager.dll.config
+C:\Users\santr\source\repos\TaskProject\Manager\bin\Debug\Manager.dll
+C:\Users\santr\source\repos\TaskProject\Manager\bin\Debug\Manager.pdb
+C:\Users\santr\source\repos\TaskProject\Manager\bin\Debug\Entity.dll
+C:\Users\santr\source\repos\TaskProject\Manager\bin\Debug\EntityFramework.dll
+C:\Users\santr\source\repos\TaskProject\Manager\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\santr\source\repos\TaskProject\Manager\bin\Debug\Entity.pdb
+C:\Users\santr\source\repos\TaskProject\Manager\bin\Debug\Entity.dll.config
+C:\Users\santr\source\repos\TaskProject\Manager\bin\Debug\EntityFramework.xml
+C:\Users\santr\source\repos\TaskProject\Manager\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\santr\source\repos\TaskProject\Manager\obj\Debug\Manager.csprojAssemblyReference.cache
+C:\Users\santr\source\repos\TaskProject\Manager\obj\Debug\Manager.csproj.CoreCompileInputs.cache
+C:\Users\santr\source\repos\TaskProject\Manager\obj\Debug\Manager.csproj.CopyComplete
+C:\Users\santr\source\repos\TaskProject\Manager\obj\Debug\Manager.dll
+C:\Users\santr\source\repos\TaskProject\Manager\obj\Debug\Manager.pdb
+C:\Users\santr\source\repos\TaskProject\Manager\bin\Debug\Models.dll
+C:\Users\santr\source\repos\TaskProject\Manager\bin\Debug\Models.pdb
