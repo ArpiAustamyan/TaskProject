@@ -12,10 +12,11 @@ using System.Web.Http;
 
 namespace TaskProject.Controllers
 {
+    [BasicAuthentication]
     public class FilesController : ApiController
     {
-        [System.Web.Http.HttpPost]
-        public IHttpActionResult Index(int id1 )
+        [HttpPost]
+        public IHttpActionResult Index(int taskid )
         {
             using (Context db = new Context())
             {
@@ -33,6 +34,7 @@ namespace TaskProject.Controllers
                     db.Files.Add(new Entity.File
                     {
                         Id=Security.AuthId-1,
+                        TaskId=taskid,
                         Name = path
                     });
                     db.SaveChanges();

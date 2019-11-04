@@ -11,13 +11,12 @@ using System.Web.Http.Description;
 
 namespace TaskProject.Controllers
 {
-    [RoutePrefix("api/UsersController")]
+    [BasicAuthentication]
     public class UsersController : ApiController
     {
         UserManager um = new UserManager();
 
         [Route("api/UserTasks")]
-        [BasicAuthentication]
         public IHttpActionResult GetUserTasks()
         {
             um.GetTask(Security.AuthId);
@@ -25,6 +24,7 @@ namespace TaskProject.Controllers
         }
 
         [ResponseType(typeof(UserModel))]
+        [AllowAnonymous]
         public IHttpActionResult PostUser(UserModel user)
         {
             if (!ModelState.IsValid)
@@ -36,9 +36,8 @@ namespace TaskProject.Controllers
             return CreatedAtRoute("DefaultApi", new { id = user }, user);
         }
 
-        [Route("api/User/Edit")]
+        [Route("api/User")]
         [ResponseType(typeof(UserEditModel))]
-        [BasicAuthentication]
         public IHttpActionResult PutEdit(UserEditModel user)
         {
             if (!ModelState.IsValid)
@@ -52,7 +51,6 @@ namespace TaskProject.Controllers
 
         [Route("api/User/Delete")]
         [HttpPut]
-        [BasicAuthentication]
         public IHttpActionResult DeleteUser()
         {
             if (!ModelState.IsValid)

@@ -39,7 +39,6 @@ namespace Manager
                 eu.Name = model._Name;
                 eu.Birthday = model._Birthday.Date;
                 eu.Password = model._Password;
-                db.Entry(eu).State = EntityState.Modified;
                 db.SaveChanges();
             }
         }
@@ -51,31 +50,30 @@ namespace Manager
             {
                 var eu = db.Users.Where(i => i.Id == id).FirstOrDefault();
                 eu.Flag = true;
-                db.Entry(eu).State = EntityState.Modified;
                 a._CreateDate = eu.CreateDate;
                 a._DelectedId = eu.Id;
                 db.SaveChanges();
                
-            }
-            
+            } 
            Log.Logging(a);
         }
+
 
         public UserTaskList GetTask(int id)
         {
             using (Context db = new Context())
             {
-                var usertask = (from u in db.Users
-                                join t in db.Tasks on u.Id equals t.AssignedId
-                                group t by u into gr
-                                where gr.Key.Id == id
+                var usertask = (from u in db.Users join t in db.Tasks 
+                                on u.Id equals t.AssignedId into Tasks
+                                //group t by u into gr
+                                where u.Id == id
                                 select new UserTaskList
                                 {
-                                    _Name = gr.Key.Name,
-                                    _LastName = gr.Key.LastName,
-                                    _Username = gr.Key.Username,
-                                    _Brithday = gr.Key.Birthday,
-                                    _Tasklist = gr.ToList()
+                                    _Name = u.Name,
+                                    _LastName = u.LastName,
+                                    _Username = u.Username,
+                                    _Brithday = u.Birthday,
+                                    _Tasklist = Tasks.ToList()
                                 }).FirstOrDefault();
                 return usertask;
             }

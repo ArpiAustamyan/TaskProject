@@ -63,7 +63,6 @@ namespace Manager
             {
                 var eu = db.Tasks.Where(i => i.CreateId == createid).FirstOrDefault();
                 eu.Flag = true;
-                db.Entry(eu).State = EntityState.Modified;
                 db.SaveChanges();
                 a._CreateDate = eu.CreateDate;
                 a._DelectedId = eu.AssignedId;

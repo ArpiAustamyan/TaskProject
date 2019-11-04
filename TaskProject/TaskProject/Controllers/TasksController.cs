@@ -11,16 +11,15 @@ using System.Net.Http.Headers;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.Description;
-//using System.Web.Mvc;
 
 namespace TaskProject.Controllers
 {
+    [BasicAuthentication]
     public class TasksController : ApiController
     {
         TaskManager tm = new TaskManager();
 
         [ResponseType(typeof(Task))]
-        [BasicAuthentication]
         public IHttpActionResult PostTask(TaskModel task)
         {
             if (!ModelState.IsValid)
@@ -32,17 +31,16 @@ namespace TaskProject.Controllers
             return CreatedAtRoute("DefaultApi", new { id = task }, task);
         }
 
-        [System.Web.Http.Route("api/Task/Delete")]
-        [System.Web.Http.HttpPut]
-        [BasicAuthentication]
-        public IHttpActionResult DeleteTask(int id)
+        [Route("api/Task/Delete")]
+        [HttpPut]
+        public IHttpActionResult DeleteTask()
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            tm.Delete(id);
+            tm.Delete(Security.AuthId);
             return Ok();
         }
 
