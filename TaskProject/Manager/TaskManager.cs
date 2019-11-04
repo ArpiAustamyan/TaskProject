@@ -33,13 +33,28 @@ namespace Manager
             }
         }
 
-        //public Task Get(int id)
-        //{
-        //    using (Context db = new Context())
-        //    {
-
-        //    }
-        //}
+        public TaskInfoModel[] Get(int id)
+        {
+            using (Context db = new Context())
+            {
+                var tasks = (from t in db.Tasks
+                             join u in db.Users on t.CreateId equals u.Id 
+                             join f in db.Files on t.CreateId equals f.CreateId into Files
+                             where t.CreateId == id
+                             select new TaskInfoModel
+                             {
+                                 _Title=t.Title,
+                                 _Description=t.Description,
+                                 _CreateDate=t.CreateDate,
+                                 _ExpireDate=t.ExpirationDate,
+                                 _FirstName=u.Name,
+                                 _LastName=u.LastName,
+                                 _Status=t.Status,
+                                 _AttCount=Files.Count()
+                             }).ToArray();
+                return tasks;
+            }
+        }
 
         public void Delete(int createid)
         {
