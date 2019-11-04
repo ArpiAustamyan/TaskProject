@@ -33,14 +33,14 @@ namespace TaskProject.Controllers
 
         [Route("api/Task/Delete")]
         [HttpPut]
-        public IHttpActionResult DeleteTask()
+        public IHttpActionResult DeleteTask(int taskid)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            tm.Delete(Security.AuthId);
+            tm.Delete(Security.AuthId,taskid);
             return Ok();
         }
 

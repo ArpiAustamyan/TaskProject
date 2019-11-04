@@ -56,7 +56,7 @@ namespace Manager
             }
         }
 
-        public void Delete(int createid)
+        public void Delete(int createid,int taskid)
         {
             Del a = new Del();
             using (Context db = new Context())
